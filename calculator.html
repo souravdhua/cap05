@@ -1,0 +1,78 @@
+<!-- Mini Calculator
+Create a mini calculator application, which has following functionalities
+Addition
+Subtraction
+Division
+Multiplication
+Your app should have
+Two input boxes which should take two numbers from the user.
+Four Buttons with following text content
+Add
+Subtract
+Divide
+Multiply
+When user enter 2 and 4 and clicks on multiply button, an alert should come with 8 as ans
+When user enter 8 and 4 and clicks on Divide button,an alert should come with 2 as ans -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <style>
+        *{
+            margin: 40px;
+        }
+        input{
+            height:40px;
+            width:auto;
+            background-color: lime;
+            border: 2px solid teal;
+            
+        }
+        ::placeholder{
+            color: navy;
+            font-size: 20px;
+            font-weight: bolder;
+        }
+    </style>
+</head>
+<body>
+    <input type="text" placeholder="enter 1st number" id="ip1">
+    <input type="text" placeholder="enter 2nd number" id="ip2">
+    <br>
+    <button onclick="add()">Add</button>
+    <button onclick="sub()">Substraction</button>
+    <button onclick="multi()">Multiplication</button>
+    <button onclick="div()">Divide</button>
+</body>
+</html>
+<script>
+    let input1 = document.getElementById("ip1") ;
+    let input2 = document.getElementById("ip2") ;
+    function add(){
+        let num1 = +input1.value;
+        let num2 = +input2.value;
+        let result = num1+num2;
+        alert(result);
+    }
+    function sub(){
+        let num1 = +input1.value;
+        let num2 = +input2.value;
+        let result = num1-num2;
+        alert(result);
+    }
+    function multi(){
+        let num1 = +input1.value;
+        let num2 = +input2.value;
+        let result = num1*num2;
+        alert(result);
+    }
+    function div(){
+        let num1 = +input1.value;
+        let num2 = +input2.value;
+        let result = num1/num2;
+        alert(result);
+    }
+</script>
