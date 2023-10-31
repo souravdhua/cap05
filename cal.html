@@ -1,0 +1,73 @@
+<!-- Mini Calculator
+Create a mini calculator application, which has following functionalities
+Addition
+Subtraction
+Division
+Multiplication
+Your app should have
+Two input boxes which should take two numbers from the user.
+Four Buttons with following text content
+Add
+Subtract
+Divide
+Multiply
+When user enter 2 and 4 and clicks on multiply button, an alert should come with 8 as ans
+When user enter 8 and 4 and clicks on Divide button,an alert should come with 2 as ans -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <style>
+        button{
+            background-color: cyan;
+            margin-top: 20px;
+            margin-right: 30px;
+            height: 40px;
+            width: 100px;
+        }
+        input{
+            height: 60px;
+            width: 150px;
+        }
+    </style>
+</head>
+<body>
+    <input placeholder="enter the first number" type="text" id="inp1">
+    <input placeholder="enter the second number" type="text" id="inp2">
+    <br>
+    <button onclick="add()">add</button>
+    <button onclick="sub()">subtract</button>
+    <button onclick="div()">divide</button>
+    <button onclick="mul()">multiple</button>
+</body>
+<script>
+    let val1 = document.getElementById("inp1");
+    let val2 = document.getElementById("inp2");
+    function add(){
+        let num1 = +val1.value;
+        let num2 = +val2.value;
+        result = num1 + num2;
+        alert(result);
+    }
+    function sub(){
+        let num1 = +val1.value;
+        let num2 = +val2.value;
+        result = num1 - num2;
+        alert(result);
+    }
+    function div(){
+        let num1 = +val1.value;
+        let num2 = +val2.value;
+        result = num1 / num2;
+        alert(result);
+    }
+    function mul(){
+        let num1 = +val1.value;
+        let num2 = +val2.value;
+        result = num1 * num2;
+        alert(result);
+    }
+</script>
+</html>
